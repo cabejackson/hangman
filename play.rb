@@ -27,7 +27,7 @@ class Hangman
     #maybe import these from a seperate file
     def words
         [
-            # ["basketball", "a game with a hoop"],        
+            ["basketball", "a game with a hoop"],        
             ["calisthenics", "graceful body movements"],        
             ["cricket", "a game not a bug"],        
             ["ballet", "body making lines to music"],        
@@ -56,9 +56,9 @@ class Hangman
             # in the array as we loop over them
         new_teaser.each_with_index do |letter, index|
          #replace blank value if guessed letter matches letter in word
-            if letter == "_" && @word.first[index] == last_guess
+            if letter == "_" && @word.first[index] == last_guess.downcase
                 #update the underscore value with the letter
-                new_teaser[index] = last_guess
+                new_teaser[index] = last_guess.downcase
             end
         end
         #override the instance variable for word_teaser with this new word_teaser value
@@ -86,7 +86,7 @@ class Hangman
                 # is w/in that string 
                 # also it returns a boolean
             # we assign that T/F value to the variable called good_guess
-            good_guess = @word.first.include? guess 
+            good_guess = @word.first.include? guess.downcase 
             #if guess contains the word exit
             if guess == "1"
                 puts "Thank you for playing!"
