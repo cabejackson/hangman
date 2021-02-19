@@ -6,7 +6,6 @@
 #what does " include? " mean? & whats the term for it question mark operator I think
 #what does nil mean? like null but not really? it's like an empty falsy value
 
-#i wonder whats the bigO notation for this? (time complexity vs space complexity)
 
 class Hangman
 
